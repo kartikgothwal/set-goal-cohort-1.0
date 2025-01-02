@@ -147,7 +147,8 @@ body {
   border: 2px solid #61481c4d;
   background: #ffffff;
 }
-.goal-box p {
+
+.goal {
   width: 364px;
   top: 447px;
   left: 500px;
@@ -161,6 +162,8 @@ body {
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
   color: #d9d9d9;
+  outline: none;
+  border: none;
 }
 .last-para {
   margin-bottom: 2rem;
@@ -192,4 +195,18 @@ footer p {
   text-decoration-skip-ink: none;
   color: #858585;
   margin-bottom: 2rem;
+}
+.block{
+  display: block;
+}
+.text-compeleted{
+  text-decoration: line-through;
+  color: #48A300;
+}
+.hidden{
+  display: none;
+}
+.completed{
+  color: #48A300;
+
 }
