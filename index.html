@@ -1,16 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A goal setting and tracking application">
-    <meta name="author" content="Kartik Gothwal">
-    <meta name="keywords" content="goal, goal setting, goal tracking, goal tracking application, goal setting application">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A goal setting and tracking application"
+    />
+    <meta name="author" content="Kartik Gothwal" />
+    <meta
+      name="keywords"
+      content="goal, goal setting, goal tracking, goal tracking application, goal setting application"
+    />
     <title>Set Goals</title>
-    <link rel="stylesheet" href="./style.css">
-</head>
-<body>
-    <h1>Hello world</h1>
-</body>
-<script src="./index.js"></script>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <section id="section-main">
+      <div class="container">
+        <header id="header">
+          <h1>Focus on <span>Today</span></h1>
+        </header>
+        <main id="main">
+          <section class="main-head">
+            <h1>Today</h1>
+            <img src="./assets/Sun.png" alt="" />
+          </section>
+          <p class="top-para">Just a step away, keep going!</p>
+          <div class="progress-bar-container">
+            <div id="progress" style="width: 20%"></div>
+          </div>
+          <p class="error-message">Please set all the 3 goals!</p>
+          <div id="goals">
+            <div class="goal-box">
+              <input type="checkbox" name="" id="" class="checkbox" />
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
+                quam voluptate temporibus mollitia aspernatur eos. Cum aliquam
+                quis necessitatibus eaque.
+              </p>
+            </div>
+          </div>
+          <p class="last-para">“Move one step ahead, today!”</p>
+          <footer>
+            <p class="f">Made with  ❤️ by Kartik Gothwal</p>
+          </footer>
+        </main>
+      </div>
+    </section>
+  </body>
+  <script src="./index.js"></script>
 </html>
