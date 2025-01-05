@@ -1,32 +1,37 @@
-const input = document.querySelectorAll(".goal");
-const inputParent = document.querySelector("#goals");
-// input.forEach((input, id) => {
-//     input.addEventListener("input", (e) => {
-//       const value = e.target.value;
-//     e.target.id = id;
-//     localStorage.setItem(id, value);
-//     console.log("🚀 ~ input.addEventListener ~ value:", value)
-//    });
-// });
+const GoalsContainer = document.querySelector("#goals");
+const ErrorMessagePara = document.querySelector(".error-message");
+const allInputs = document.querySelectorAll(".input-text");
 
-inputParent.addEventListener("input", (e) => {
-  const target = e.target;
-
-  console.log("🚀 ~ inputParent.addEventListener ~ target:", e);
-
-  if (target.type == "radio") {
-    target.previousElementSibling.classList.add("block");
-    target.classList.add("hidden");
-    target.nextElementSibling.classList.add("text-compeleted");
+function checkInputEmpty() {
+  const InputArray = Array.from(allInputs);
+  return InputArray.every((item) => {
+    return item.value.length > 0;
+  });
+}
+GoalsContainer.addEventListener("click", (e) => {
+  if (e.target.type == "radio") {
+    if (!checkInputEmpty()) {
+      e.target.checked = false;
+      ErrorMessagePara.classList.remove("hidden");
+      ErrorMessagePara.classList.add("block");
+    } else {
+      ErrorMessagePara.classList.add("hidden");
+      e.target.classList.add("hidden");
+      e.target.previousElementSibling.classList.remove("hidden");
+      e.target.previousElementSibling.classList.add("block");
+      e.target.nextElementSibling.classList.add("text-compeleted");
+    }
   }
-});
-inputParent.addEventListener("click", (e) => {
-  const target = e.target;
+  else if(e.target.type == "image"){
 
-  console.log(
-    "🚀 ~ inputParent.addEventListener ~ target:",
-    target.nextElementSibling
-  );
-  if (target.tagName === "IMG" && target.classList.contains("hidden")) {
   }
+  else if(e.target.nodeName=="IMG"){
+    e.target.classList.add("hidden");
+    e.target.classList.remove("block");
+    e.target.nextElementSibling.classList.add("block");
+    e.target.nextElementSibling.classList.remove("hidden");
+    e.target.nextElementSibling.nextElementSibling.classList.remove("text-compeleted");
+    e.target.nextElementSibling.checked =false;
+  }
+
 });
