@@ -28,14 +28,22 @@
           </section>
           <p class="top-para">Just a step away, keep going!</p>
           <div class="progress-bar-container">
-            <div id="progress" style="width: 20%"></div>
+            <!-- <div id="progress"></div> -->
+            <progress id="progress" value="0" max="100">
+              <span id="progress-value">0%</span>
+            </progress>
           </div>
           <p class="error-message hidden">Please set all the 3 goals!</p>
           <div id="goals">
             <div class="goal-box">
               <img src="./assets/complete.png" alt="" class="hidden" />
               <input type="radio" name="" task="1" class="checkbox" />
-              <input type="text" class="goal input-text" task="1" placeholder="Goal 1" />
+              <input
+                type="text"
+                class="goal input-text"
+                task="1"
+                placeholder="Goal 1"
+              />
             </div>
             <div class="goal-box">
               <img src="./assets/complete.png" alt="" class="hidden" />
@@ -46,7 +54,12 @@
                 task="2"
                 class="checkbox"
               />
-              <input type="text" class="goal input-text" task="2" placeholder="Goal 1" />
+              <input
+                type="text"
+                class="goal input-text"
+                task="2"
+                placeholder="Goal 1"
+              />
             </div>
             <div class="goal-box">
               <img src="./assets/complete.png" alt="" class="hidden" />
@@ -57,7 +70,12 @@
                 task="3"
                 class="checkbox"
               />
-              <input type="text" class="goal input-text" task="3" placeholder="Goal3" />
+              <input
+                type="text"
+                class="goal input-text"
+                task="3"
+                placeholder="Goal3"
+              />
             </div>
           </div>
           <p class="last-para">“Move one step ahead, today!”</p>
